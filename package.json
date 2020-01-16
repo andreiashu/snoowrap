@@ -15,7 +15,7 @@
     "smoketest": "npm run test -- -g 'smoketest'",
     "build-docs": "npm run build:docs",
     "build:docs": "scripts/build_docs.sh",
-    "build:babel": "babel -q -d dist/ src/",
+    "build:babel": "babel -d dist/ src/",
     "build:types": "tsc -p tsconfig.gen-dts.json",
     "bundle-size": "npm run build-docs && gzip -c doc/snoowrap-v$(npm info . version).min.js | wc -c | xargs",
     "coverage": "istanbul cover _mocha -- --require @babel/register test/snoowrap.spec.js",
